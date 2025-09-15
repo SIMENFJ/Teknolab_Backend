@@ -4,7 +4,7 @@
   "description": "Backend for Teknolab project using Prisma and Express",
   "main": "src/index.ts",
   "scripts": {
-    "start": "node dist/src/index.js",
+    "start": "node dist/src/index.ts",
     "build": "tsc && npx prisma migrate deploy && npx prisma generate",
     "dev": "ts-node-dev src/index.ts",
     "remove-reservations": "ts-node src/scripts/removeAllReservations.ts"
