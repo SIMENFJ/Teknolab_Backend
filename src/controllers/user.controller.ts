@@ -5,9 +5,9 @@ class UserController {
     constructor(private prismaService: PrismaService) {}
 
     async createUser(req: Request, res: Response) {
-        const { name, email } = req.body;
+        const { name, email, password } = req.body;
         try {
-            const user = await this.prismaService.createUser({ name, email });
+            const user = await this.prismaService.createUser({ name, email, password });
             res.status(201).json(user);
         } catch (error) {
             res.status(500).json({ error: 'Error creating user' });
